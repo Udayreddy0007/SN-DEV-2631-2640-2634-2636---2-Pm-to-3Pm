@@ -1,0 +1,58 @@
+
+
+
+----> Date : 22/10/26  
+
+
+ --- HTML -Hypertext markup language 
+     
+     -- Structure , fewtags , tables , forms , list
+ 
+ --- CSS - Cascading style sheet  
+  
+     -- Properties , BOX model
+
+ --- JS - JavaScript  
+  
+   --- Intro , Data , Data types , Variables , Keywords , Conditional statememts , Looping / iterative statements , 
+      Arrays , Functions , methods , objects  , Notification keywords 
+
+
+
+ ---> SN Scripting / Development / Customization
+  
+     --- Intro 
+
+    --- Client side 
+     
+           --onLoad , onChange  , onSubmit , onCellEdit
+    
+    --- Server side 
+      
+       ---GlideObjects , Glide Apis -- DML Operations(Insert() , Update() , Delete() , Query() , RollBack) GlideRecord , 
+       
+        GlideAggregate -- COUNT , MIN , MAX , AVG ,SUM 
+
+   -- Business rules -- Before ,After , Async , Display -- methods (g_scratchpad)
+   
+   -- GlideAjax & ScriptInclude -- 2,3 user cases
+
+
+    ---> END - TO - END(Application)
+
+
+---> We need a platform to do practice  
+    
+       we are using a env(Environment) we call it as IDE (integrated development Environment)
+
+    --- VSCode(Visual studio code) 
+     
+     -- Setup  
+       
+       1. open webbrowser search for Vs code download
+        
+        download from here
+         
+            https://code.visualstudio.com/download?_exp_download=d53503e735
+
+       2 . Select the OS based up on system configurations
