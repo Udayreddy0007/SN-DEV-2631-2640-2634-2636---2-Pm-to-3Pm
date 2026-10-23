@@ -1,0 +1,78 @@
+
+---> Date : 23/10/26
+
+  
+  ---> HTML - Hypertext markup language 
+
+     ---> It gives the structure to a web page  and display the content over the web page
+      
+      --> HTML is light weight  
+      ---> easy to learn -- for begginers
+      ---> easy to understand 
+      ---> it allow the css 
+      ---> it also allow the JS 
+
+----> it tells the browser 
+     -- this is heading 
+      -- this is paragraph 
+      -- this is a image 
+       -- this is list 
+       -- this is a table 
+       -- this is a form
+
+----> NOTE : HTML is not a programming language 
+               it's a markup language
+
+
+---> Structure of HTML 
+
+   -- In HTML everthing that we gonna see and those are treated as TAG 
+      
+      <>--- angular bracket(open angualr bracket)
+      </> -- closed angular bracket 
+
+
+      <!DOCTYPE html> -- it will tell the browser the DOCTYPE is html(on webbrowser every page type is DOCTYPE html)
+        <html> -- in between this tags we gonna define i=our web pages details and content(root element)--entry gate 
+       
+        <head> --- we define the internal details about the page 
+           <title>We define the title of the browser tab</title>
+        </head>
+        
+        <body> --body tell the browser what to display
+        </body>
+        
+        </html> -- exit 
+
+
+--- we write html inside a file and that file should be stored with .html extenstion 
+
+---> Title tag - we use it for naming our browser tab
+
+----> HTML element -
+        
+        it defines the structure of a tag 
+        <> content </>
+        <> content -- html element
+
+
+
+---> Heading tags in HTML 
+   
+   --> h1 to h6  -- which adds heading to our page 
+   
+   <h1>content</h1>...
+        .....
+         .....
+         .....
+     <h6>content</h6> 
+
+     ---> Comment in HTML 
+             
+             comments are used to make the things understandable 
+
+          <!-- -->
+
+
+
+
