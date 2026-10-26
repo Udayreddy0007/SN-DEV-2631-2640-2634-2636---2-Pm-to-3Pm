@@ -74,5 +74,84 @@
           <!-- -->
 
 
+---> Date : 26/10/26
+
+
+   -- p tag / paragraph tag 
+      
+      -- it allow the user to add paragraph over the page 
+        
+        <p>here we are writing the content</p> 
+
+        -- lorem is used to generate duplicate words 
+            
+
+    -- image tag is used to display images over the page 
+        
+        <img src="from which source" >
+
+   --- HTML attribute  
+     
+        -- which give additional information about the tag  
+          
+          and an attribute is decalred inside the opening tag and it as some value
+
+    -- alt - alternate attribute used to add a text for an image as a reference when the things are not loaded
+              properly 
+               
+      
+   --- Anchor tag / a tag : it allow the user to create hyperlinks  / allow he/she to navigate btw the pages 
+    
+          
+          <a href="page address">Link text</a>
+
+
+------> Creation of tables using HTML Tags   
+   
+       <table> -- it gives the table structure  
+
+          <tr>  -- for row creation table row
+          </tr> 
+            
+            <th></th> -- table header which allow us specifiy the names of the column  
+            <td></td> -- table data which allow users to  add the data into the table
+       </table>
+
+
+-----> Creation of list using HTMl  
+
+     -- In HTML we  have two types of lists they are 
+
+        1. ordered list  - when the sequence matters we use ordered list 
+          
+          ex : 
+                
+                1.INC1002
+                2.INC1003
+                3.INC10045
+
+          
+           <ol>
+              <li></li> -- list item refers to each individual item that is dispalyed over the page
+           </ol>
+
+        2. unordered list  - When the sequence doesnt matters we use unordered lsit 
+         
+           ex : 
+               
+               .INC1002
+               .INC1003
+               .INC10045 
+             
+             <ul>
+             <li></li>
+             </ul>
+                
+
+               
+
+
+      
+
 
 
