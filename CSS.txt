@@ -1,0 +1,34 @@
+
+---> Date : 27/10/26 
+  
+  
+    -- CSS : Cascading style sheet 
+      
+      -- which helps the developer to decorate  and apply styling to the page 
+        
+       -- in css we will be using the properities and their values to define the 
+          style of an element  
+
+
+       -- Few CSS properties 
+            - color : colorname; -- which adds the color to the text 
+            - background-color:colorname; - which adds the background color to element
+          
+ --- 3 ways of decalring / writing the css   
+   
+   1.inline css  - we define the css style inside a tag we use  inline css only for single / specific element
+     
+     ex : 
+       
+       <p style="propertyName:propertyValue;">Hello we are learning CSS</p>
+
+   2.internal css  - we difne the css in the html  code inside the head tag 
+    we use internal css  if you want to apply style to a single 
+
+    decalration : 
+     
+     <style>
+     </style>
+    
+    
+   3. external css

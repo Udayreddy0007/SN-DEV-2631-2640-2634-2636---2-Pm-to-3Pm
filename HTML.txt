@@ -148,6 +148,20 @@
              </ul>
                 
 
+
+----> Date : 27/10/26 
+ 
+   ---> Creation of form using html  
+    
+         
+       <form> -- we allow us to create a  layout for the form
+       <label>Label name</label>  -- it is used to specify the field name
+       <input type="which type" > -- used to create different types of fields
+       <button>Button name</button>  -- used to create a button over my page   
+       <select>  -- used to create a choice field
+       <option></option> -- used to create options inside the choice field
+       </select>  
+       </form>
                
 
 
