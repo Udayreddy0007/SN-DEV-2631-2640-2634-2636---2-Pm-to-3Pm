@@ -22,13 +22,28 @@
        
        <p style="propertyName:propertyValue;">Hello we are learning CSS</p>
 
-   2.internal css  - we difne the css in the html  code inside the head tag 
-    we use internal css  if you want to apply style to a single 
+   2.internal css  - we define the css in the html  code inside the head tag 
+    we use internal css  if you want to apply style to a single page 
 
     decalration : 
      
      <style>
+             {
+              
+             }
      </style>
     
     
-   3. external css
+   3. external css - we create a separate file and we  define style in that file and
+                     later we will be linking it with the html files 
+                      
+            The css files  should be stored with .css extention 
+
+        decalration:
+         <link rel="stylesheet" href="style.css">
+
+         rel=relationship with the particular file 
+
+         href= which allow html page to apply the styles that are declared inside the css  file 
+
+               (we pass the css file which contain the styles )    
