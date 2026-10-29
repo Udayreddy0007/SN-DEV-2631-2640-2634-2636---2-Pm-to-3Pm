@@ -1,0 +1,88 @@
+
+--> Date : 29/10/26
+
+   ---> What is JS ? how does it helps page  
+      
+ --> Its a programming language / Scripting language 
+  ---> Used for web development 
+  ---> Both client side and Server side language
+
+
+  ---> Java Script can be written in two ways 
+    
+     1.internal JS  : we  write the code outside the html body element  by using script tags  and inside that tags we define 
+                    logics 
+            
+            declaration:
+               
+               <script>
+                  
+                  in btween this we write our logic
+
+               </script>
+
+     2. External JS  : we will be creating a separate file and in that file we write our logic then we link it with
+                       html  outside the body tag or  inside the head tag
+           
+           -- The file should be stored with .js extention
+
+
+    ---> Features of Javascript 
+      
+       -- ligtweight code
+       -- it is platform independent language 
+       -- it support object-oriented language - java 
+       -- event-driven - buttton events , mouse events
+
+       --- scripts , logics , business logics
+
+
+------> JavaScript Overview  
+    
+      -- What is data
+      -- types of data
+      -- variables & variable rules
+      -- Variable keywords 
+      -- Operators
+      -- Conditional statements 
+      -- looping / iteration control statements
+      -- notification - alert , prompt , confirm
+      -- Array 
+      -- function and methods 
+      -- Objects 
+
+
+---> What is data ?
+
+    -- which contains information(a piece of info we call it as data) 
+
+       ex :  name : uday , email: udayreddy@gmail.com
+          
+            phno:9545465443  ID:123AM
+    
+    ---> Data type -  every data as some information and that data is in different format / either it is in numercial data , alphabets
+                       character
+            
+            1.String Data Type : combination of characters and number we call it as string 
+                                 
+                                 string data is declared in btw '' 0r ""
+                        
+            ex: name , n1mw 
+               
+               ex -  "name"  , "123" ,"n1ame" 
+
+
+            2.Integer Data type :  If the information is in the form of numbers we call it as integer data
+              
+              ex : phn:9050406060
+
+            3.Decimal data type : if the number as  two precision values we can treat it as decimal value 
+               
+               ex : percentage - 98.99%;
+
+            4.boolean : it checks the conditions either true / false (yes/no)
+              
+               ex : he/she is 18year and eligible - yes / true
+                    he/she is 16 years and major - false / no
+
+     
