@@ -85,4 +85,76 @@
                ex : he/she is 18year and eligible - yes / true
                     he/she is 16 years and major - false / no
 
+
+---> Date : 30/10/26
+
+   
+   ---> Variable  :Variable is a container which stores the types of data values 
+           a name in which we are storing the data
+
+           syntax : 
+
+                     variableName = dataType value;
+
+              ex  : Name = "Uday"  , ID-NO ="14A37";
+
+      
+---> Rules for writing Variable name 
+       
+        -- A variable name  starts with a letter or combination of letter and number 
+             
+             or else _(underscore) , $(except dollar no other special symbols are consider if a variable starts
+              with that special)
+      
+            ex : 
+                  _name , n1ame , n$ame , $name , @name , na_me
+
+         
+         -- if a variable name starting with number we dont consider it as a varible name 
+         -- if a vaiable consist of spaces we dont consider it as variable name 
+
+         -- Javascript is a case sensitive language 
+             
+             ex :  name , Name
+
+         -- Javascript uses camelCase for naming convention 
+            
+            ex : stdName = "uday";
+                emp_Name="uday";
+                1name  X(wrong) 
+
+
+
+------> Variable keywords   
+  
+      -- Let - it is a block scope variable keyword . 
+                we can decalre it once and we can update the values 
+         
+               syntax :  let variableName = data ;
+                    
+                    ex - let stdName = "Vivek";
+                             stdName ="Uday"; -- latest value 
+                               console.log(stdName);
+
+      -- const - it is also a block scope variable keyword 
+                  we decalre and assign the value only once
+
+                  syntax :   const  stdName = "Vivek";
+                                   stdName ="Uday";
+                                  console.log(stdName);
+
+      -- var - it is a  global scope variable keyword 
+                we can decalre it multiple times and also update the values
+
+                Syntax: 
+                        var stdName = "Vivek";
+                             stdName ="Uday";
+                             console.log(stdName);
+                  
+
+   ------> console.log(variableName);-- it is in the real javascript (printing statement)
+        
+           on the platform gs.info()   or gs.print()
+
+
      
