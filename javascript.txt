@@ -156,5 +156,76 @@
         
            on the platform gs.info()   or gs.print()
 
+   
+
+   ----> Date : 2/11/26 
+
+     
+     ---> Operators in JS : 
+      
+       --- Operators helps the developer to perform  calculations on the browser  
+        
+          --> Operator  :  A symbols between the two variable we call it as operator
+            
+            ex : 
+                     a + b ; --- addition
+
+
+          --> Operand : The variables are treated as operands while performing the calculations 
+
+
+
+      
+ ----> Operators in  JS there are 5 types :
+   
+
+   1. Arithematic Operators :  We can perform + , - , / , % , *
+       
+       general mathematics 
+        
+
+  2. Compound Assignment Operator : combination arithematic and assignment operator 
+   
+         (+= , -=, /= , %= , *= , **(Ternary operator))
+
+
+   3. Comparsion operators : Comparing the two variables we use these operators
+
+      ( == , === , <= , >= ,< , > , != )  
+        
+
+        --> == : it comapre two condition if the values are same we get  output as true 
+         
+        --> === :  we call it as exact Comparsion even though the values are same it checks the data type 
+               
+                 (if the values are same and the data type is also same then only the output is true)
+
+                 a = 10;
+                 b="10";
+                console.log( a===b ); // false 
+
+   4. Logical operators : We use this operators to check the conditions 
+    
+       - &&(AND) -  both conditions should be true then only the output is true otherwise  we get false
+
+       - ||(OR) - atleast one condition must be true then only we get true otherwise we get false
+
+       - !(NOT) - if the condition is  true we get output as false and if the cond is false we get output 
+                   as true
+
+      
+   5. Increment / Decrement operator : 
+     
+        (++ , --)
+
+        ---> ++(Increment the original value by +1)
+
+        ---> --(Decrement the original by -1)
+
+
+
+           
+               
+
 
      
