@@ -224,7 +224,131 @@
 
 
 
-           
+
+----> Date : 3/11/26 
+    
+    ---> Conditional statements :   The block of code is executed when the conditions matches 
+       
+       we call it as conditional statements  
+        
+
+        1 . if conditional statement  : the block of code is executed when the condition is true 
+         
+            syntax :  
+                   
+                        var age =18;
+                        if(condition){
+
+                              // True Statement  (True block)
+                        }
+
+        2. if else conditional statement : When the true block conditions are not matching we have to print something
+                                           a default block is executed (else block)
+
+
+
+                Syntax : 
+                               if(condition){
+                                 
+                                 // true statement 
+                               }
+                               else { 
+
+                                       // default statement
+                               }                           
+
+        3. Nested if statement   : Here we are writing multiple true statements 
+            
+               syntax :   
+                           if(cond1){
+
+                              // statement1
+                           }
+                           if(cond2){
+
+                              // statement 2
+                           }
+                           if(cond3){
+
+                              // statement 3
+                           }
+
+               ex : 
+                                   var age = 18 ;
+                                   if(age==16)
+                                   {
+                                       console.log("He/she is eligible to vote");
+                                   }
+                                   if(age>18){
+                                        console.log("He/she age is more than 18");
+                                    }
+                                   if(age<20){
+                                   
+                                       console.log("He / she age is less than 20");
+                                   }
+                                   if(age==18){
+                                       console.log("He/she is major");
+                                   }
+                                   
+        4. else if statement  :  
+
+                  Here we are defining false conditions in the false  
+                  else if(false block)
+    
+                Syntax : 
+                    
+                          if(cond1){
+
+                           // statement   // true block
+                          }
+                          else if (cond2){
+
+                                // statement  // false block
+                          }
+                          else {
+                                //default statement  // default block
+                          }
+     
+        5. Nested else if  statement : We will be writing multiple else if conditions 
+                      
+                      syntax : 
+                          
+                          if(cond1){
+
+                              // statement1
+                          }
+
+                         else if(cond2){
+
+                              // statement 2
+                           }
+                          else if(cond3){
+
+                              // statement 3
+                           }
+                           else{
+
+                              // default statement
+                           }
+
+
+-----> Looping control statements/ Iterative control statements :
+
+    ---> loop iterate continuously until the condition  is true 
+     
+     1. for loop : the loop iterates until the condition is true 
+        
+          Syntax : 
+               
+                var i=0;
+               for(var i=0; i<=10; i++){
+
+                  // statement
+               }
+
+     2. While loop 
+
+     3. Do while loop
                
 
 
