@@ -346,10 +346,87 @@
                   // statement
                }
 
-     2. While loop 
+               var i=0 is called as intial condition 
+               i<=10 is called as stopping condition 
+               i++ is Increment
 
-     3. Do while loop
+
+----> Date : 4/11/26 
+
+     2. While loop :  The loop check the conditions first then the loop execute 
+      
+         Syntax : 
+            
+                var i =0;
+                while(i<=10){
+
+                  // statement 
+                   i++;
+                }
+
+     3. Do while loop : The loop execute at least once and at the last the 
+                          condition is checked 
+
+         Syntax :   
+            
+              
+                    var i =1;
+                    do{
+
+                     // statement ;
+                      i++;
+                    }while(i<=10);
+
+
+
+
+      ----> Array in JS :  
+                   
+            ---> Group of similar data is stored under a name we call it as array  
+              
+              --> the data that is stored inside an array occupies some location 
+              ---> To get the loation of that particular data we will be using index  
+
+              ---> Index : which specifies the location of the data at a number 
+              -- Index value starts from 0 
+
+         ex :   Cities = ['Hyderabad','Vizag','Mumbai'];
+                             0           1        2
+         ---> Array Length : the amount of the data stored in the array 
                
+                   arraylength = 3
 
+  ----> Finding the index of cities 
+
+               var cities = ["Hyderabad","Mumbai","Vizag" ,"Banglore","Kolkata","NewDelhi","Odisha"];
+                console.log(cities[4]);
+         
+   ----> Finding the size of the array 
+
+          var cities = ["Hyderabad","Mumbai","Vizag" ,"Banglore","Kolkata","NewDelhi","Odisha"];
+           console.log(cities.length);   
+
+
+   ----> Printing the array data using the for loop 
+
+    var cities = ["Hyderabad","Mumbai","Vizag" ,"Banglore","Kolkata","NewDelhi","Odisha"];
+
+    for(var i=0; i<=cities.length; i++){
+
+      console.log(cities[i]);
+    }           
+
+
+
+-----> Notification keywords 
+ 
+  1. alert() -- it is used to populate a  pop up message over the website
+         
+         alert("Hey Charge your laptop");
+
+  2. confirm() -- it is used to populate a pop up message over the website but here 
+                   we can ignore
+
+  3. prompt() -- It is used to populate a dialog with question and allowing user to provide answer
 
      
