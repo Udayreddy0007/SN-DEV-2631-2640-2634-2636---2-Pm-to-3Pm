@@ -429,4 +429,84 @@
 
   3. prompt() -- It is used to populate a dialog with question and allowing user to provide answer
 
-     
+
+  ----> Date  : 5/11/26 
+    
+      
+      ---> Functions  :  A block of reusable we call it function 
+       
+         in javascript we have two types of functions 
+
+         1. Functions without parameters : 
+            
+                 function functionName(){
+
+                  // methods
+
+                 }
+                 functionName();
+
+                 ex :   
+                                   function message(){
+                                 
+                                     console.log("Hey  my default fucntion is created and running sucessfully");
+                                 }
+ 
+         2. Functions with parameters  : 
+           
+                             function add(a , b){
+                                
+                                    return a + b ;
+                                }
+                                add(10,20);
+
+
+         --- methods : which does some action 
+            
+            -- return type : does some action and also return some value
+            -- void Type :  does some action but doesnt return any value
+
+
+   
+ -----> Objects  in JS :    
+       
+       ---> Real world thing  / object is a instance of class 
+        
+        ---> Class is a BluePrint 
+
+
+        ----> Object creation in JS
+         
+          Var Objectname = {
+           
+             //properities : values,
+
+          } 
+          objectname.propertyName
+  
+
+
+----> Functions VS  objects 
+
+
+----> Note : If a function is defined in an object we treat it as a method
+
+
+             var stdDetails={        
+
+            Name: "Uday",
+            ID : "21M91AO",
+            Course : "FS-Development",
+            Age : 24,
+            City : "Hyderabad",
+            feePaid: true ,
+            Academic : 9.0,
+            msg:function()
+            {        
+
+             console.log("The student Name --" +this.Name+"\n"+"Id no-"+this.ID+"\n"+"The course is--"+this.Course+"\n"+"The city he lives in --"+this.City);
+             
+            }
+        }
+        stdDetails.msg();
+             
