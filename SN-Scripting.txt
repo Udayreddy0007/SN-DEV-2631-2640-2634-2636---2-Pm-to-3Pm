@@ -1,0 +1,46 @@
+
+
+----> Date :6/11/26
+
+
+----> Scripting in SN 
+ 
+   ----> Client side :   form lvl action , list lvl actions 
+
+       onLoad  , onChange , onSubmit , onCellEdit 
+
+    -----> Server side :  Action  are performed on the database lvl , server lvl 
+
+       ---> Glide Api -- gliderecord , glideaggregate , glideajax 
+
+          ----> Business rules -- Before , After , Async , Display ---- g_scratchpad
+     
+        ----> Scriptinclude  and glideajax ---- imp(adv)
+   
+   ------> AI agents - Now assit , Otto ---- Application development 
+
+
+
+   ---> Client script :  
+       
+
+       1. onLoad :  on loading form if you want to perform any action 
+                      you can do that 
+
+                ---> onLoad is used for making the fields mandatory ,  hiding the field  
+                      setting up the value 
+
+           
+           syntax :  
+                    function onLoad(){
+
+                              // action 
+
+                    }
+
+
+        ---- g_form.addInfoMessage("paste any value");
+              (open the form and the message on the form)
+
+            --- setMandatory("fieldname",true);
+            -- setValue("fieldname","string that you want to set in that field");
