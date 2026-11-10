@@ -119,5 +119,51 @@
                          	else if(cat=="hardware"){
                          		g_form.addInfoMessage("The category is selected to hardware");
                          	}
-                         
+
+   ----> Date : 10/11/26 
+
+
+    ---> onSubmit :  form submit  actions , restricting  the user from submit the form 
+
+          return true --- allow user to submit the form
+          retrun false --- restrict the user from submitting the form
+
+       -- User case 1 : if description field is empty i just want to restrict the user from submitting the form 
+                         also populate a error msg 
+
+
+            Script :  
+                       function onSubmit(){
+
+                        var des = g_form.getValue("description");
+                        if(des==""){
+
+                           g_form.addErrorMessage("The description field is filled mandatory");
+                            return false;
+                        }
+                        return true;
+                       }
+
+
+ ----> onCellEdit :  Restrict the user from updating the values from the list lvl 
+     
+       callback(true) --- allow the user to update  
+       callback(false) --- block the user from updating
+
+
+
+       User case 1 : When the user tries to update the  caller  from the  list level please 
+                     block the user from updating the caller 
+
+                  
+         Script :  
+                                    
+                   if(newValue==""){
+                  	alert("you cannot update the value");
+                  	callback(false);
+                  	return;
+                   }
+                   callback(true);
+
+
                          
