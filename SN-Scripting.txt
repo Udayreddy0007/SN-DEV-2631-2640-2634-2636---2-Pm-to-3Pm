@@ -166,4 +166,73 @@
                    callback(true);
 
 
-                         
+-----> Date : 13/11/26
+
+
+     ----- Server Side : We are writing the logics to execute on the DB (Table)
+
+                 --- to write server side scripts we navigate to scripts background
+
+                 printing statements in SN (gs.print or gs.info)
+
+        --- DML Operations 
+          
+          -- Insert() --- allowing the developer to create the records in tables
+
+          -- Update() --- Allowing the developer to update single record  , Multiple records 
+
+          -- Delete() --- Allowing the developer to delete multiple records and a single record
+
+          -- Query () --- Allowing the developer to fetch the data from the tables
+
+          -- RollBack()  --- to revert back  
+
+   
+
+----> Insert() : Creating the records inside the tables  
+
+    Syntax :  
+          
+            var gr = new GlideRecord("TableName"); // selecting the table
+            gr.intialize();  // opening a new record 
+            gr.fieldname = "" ;   // accessing the fields and filling the details
+            gr.insert();            // saving the form 
+
+
+
+      Business Scenario 1 :  
+                             As a System Administrator i just want to create a record in incident table 
+
+
+            Script :   
+                       var gr = new GlideRecord("incident");
+                      gr.initialize();
+                      gr.caller_id="46d44a23a9fe19810012d100cca80666";
+                      gr.category ="hardware";
+                      gr.short_description="Created this record using the server side Insert Operation";
+                      gr.insert();
+                      gs.info("The record has been created successfully -- " + gr.number);
+
+
+         Business Scenario 2 : As a  System Administrator i just want to create multiple records in the table 
+
+            
+              Script :  
+                       
+                    var gr = new GlideRecord("incident");
+                    
+                    for (var i = 0; i <= 20; i++) {
+                        gr.initialize();
+                    
+                        gr.caller_id = "46d44a23a9fe19810012d100cca80666";
+                        gr.category = "hardware";
+                        gr.short_description = "Created this record using the server side Insert Operation";
+                        gr.insert();
+                    }
+                    gs.info("The record has been created successfully -- " + gr.number);
+                      
+
+----> Note : Dont use for loop after the initialize method 
+               use it before the initialize method or else at the beginning of the code to avoid the duplication
+ 
+       
