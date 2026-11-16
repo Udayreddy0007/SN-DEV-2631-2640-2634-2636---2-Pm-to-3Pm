@@ -235,4 +235,112 @@
 ----> Note : Dont use for loop after the initialize method 
                use it before the initialize method or else at the beginning of the code to avoid the duplication
  
+
+
+
+
+
+  ---> Update () : 
+
+       Note : update() -- used for updating single record(if loop) it also used updating multiple records 
+                           while loop 
+  
+       updateMultiple() -- no need of using while loop 
+
+
+
+  
+   ---> Syntax :  
+                  var gr = new GlideRecord("TableName");
+                  gr.addQuery('fieldName','value');  // applying the filter
+                  gr.query();                 // run the filter at the same read the record  / fetching the records 
+                  while(gr.next()){
+
+                      gr.fieldName = value;
+                      gr.update();
+
+                  }
+
+
+   
+   ---- User Scenario 1 : As a admin i want to update  a record category field , short_description , caller field 
        
+           Script: 
+               
+                   var upRec =new GlideRecord('incident');
+                   if(upRec.get('sys_id','12e0a85e936c13508c75fbf08bba10f2')){
+                   
+                   	upRec.caller_id=gs.getUserID();
+                   	upRec.category='software';
+                   	upRec.short_description="Updated single record using the server side DML operation";
+                   	upRec.update();
+                   }
+
+
+      
+   --- User scenario 2 :  As an Admin  want to update multiple record  if the category is selected to inquiry/help
+
+           and also get  how many records are associated
+         
+         
+          Script : 
+                       
+                       var upMultrec = new GlideRecord('incident');
+                       upMultrec.addQuery('category','inquiry'); // filter is appliend on category = inquiry
+                       upMultrec.query(); // run the filter / fetch the records 
+                       while(upMultrec.next()){
+                       
+                       	upMultrec.short_description ="Updated record using glide record update operation";
+                       	upMultrec.update();
+                       }
+                       gs.info("The no of records with category inquiry --"+upMultrec.getRowCount());
+               
+
+
+   ---- User scenario 3 : Updating  active records short description and state field also impact an urgency
+
+         
+           Script : 
+                
+                  var upMultRec = new GlideRecord('incident');
+                  upMultRec.addQuery('active',true);
+                  upMultRec.query();
+                  upMultRec.short_description =" updating using Update Multiple method ";
+                  upMultRec.state ="2";
+                  upMultRec.impact="1";
+                  upMultRec.urgency="2";
+                  upMultRec.updateMultiple();
+                  gs.info(upMultRec.getRowCount());
+
+
+-----> Delete :  
+   
+        Note : deleteRecord -- is a method used to delete one record 
+
+           deleteMultiple --- to delete multiple records 
+
+           while deleting one record we have to use if loop 
+
+
+      --- User scenario 1 :  I want to delete a single record 
+
+
+             Script : 
+                      
+                      var delRec =new GlideRecord('incident');
+                       if(delRec.get('number','INC0010009')){
+                       	delRec.deleteRecord();
+                       }
+
+
+      
+      --- User scenario 2 : I want to delete multiple  active records 
+        
+           
+
+           Script :   
+              
+                              var delRec =new GlideRecord('incident');
+                              delRec.addQuery('active',true);
+                              delRec.query();
+                              delRec.deleteMultiple();
