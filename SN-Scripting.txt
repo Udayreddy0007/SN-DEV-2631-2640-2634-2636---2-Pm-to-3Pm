@@ -344,3 +344,178 @@
                               delRec.addQuery('active',true);
                               delRec.query();
                               delRec.deleteMultiple();
+
+
+
+
+----> Date : 17/11/26
+
+   ------- GlideAggregate : We use this  GlideAPI / Glide object to perform statistics , calculations 
+
+            on tables   
+
+    ---> Aggregate function  -- COUNT , MIN , MAX , SUM , AVG 
+
+
+     Syntax : 
+                
+                var ga = new GlideAggregate('tablename');
+                ga.addAggregate('Function name');
+                ga.query();   // server receives the count 
+                  
+               if(ga.next()){
+
+                  var result = ga.getAggregate('functionName');
+                  gs.info(result);
+               }
+
+                 
+     
+       
+
+  ----User case 1 :  I want to calculate the no of records inside incident table 
+ 
+             Script : 
+                        
+                       var countInc = new GlideAggregate('incident');
+                       countInc.addAggregate('COUNT');
+                       countInc.addQuery('category','software');
+                       countInc.query();
+                       if(countInc.next()){
+                       
+                       	var result = countInc.getAggregate('COUNT');
+                       	gs.info("The no of records in incident table is --"+result);
+                       }
+
+   
+   ------- User case 2 :  i want to get the no of records for each category 
+     
+          Note : grouBy("fieldName") --- helps to apply the filters on each field value 
+
+
+           Script :
+                       
+
+                    var countInc = new GlideAggregate('incident');
+                    countInc.addAggregate('COUNT');
+                    countInc.groupBy('category');
+                    countInc.query();
+                    while(countInc.next()){
+                    
+                    	var result = countInc.getAggregate('COUNT');
+                    	var dis = countInc.getDisplayValue('category');
+                    	gs.info("The no of records in incident table is --"+dis+'=>'+result);
+                    }
+
+
+               
+         
+----- User case 3 : I want to get count of , active , state new , category inquiry records 
+              
+               Note : addEncodedQuery("pasting the query") -- helps us to apply multiple filters
+
+            Script :  
+
+                    var countInc = new GlideAggregate('incident');
+                    countInc.addAggregate('COUNT');
+                    
+                    countInc.addEncodedQuery('active=true^state=1^category=inquiry');
+                    countInc.query();
+                    if(countInc.next()){
+                    
+                    	var result = countInc.getAggregate('COUNT');
+                    	
+                    	gs.info("The no of records in incident table is --"+result);
+                    }
+                    
+
+
+----> MIN : To find the minimum value 
+   
+        syntax : 
+          
+               var ga = new GlideAggregate('table');
+               ga.addAggregate('functionName','fieldName');
+               ga.query();
+               if(ga.next()){
+
+                  var result = ga.getAggregate('functionName','fieldName');
+                  gs.info(result);
+               }
+
+
+
+
+   ---- User case 1 :   Find the minimum cost of a ci 
+
+    Note : setGroup(false) - removes the group by 
+            
+            syntax : 
+                         
+                           var minCost = new GlideAggregate('cmdb_ci');
+                            minCost.addAggregate('MIN','cost');
+                            minCost.setGroup(false);
+                            minCost.query();
+                            while(minCost.next()){
+                            
+                            	var c = minCost.getAggregate('MIN','cost');
+                            	gs.info("The minimum cost of a ci is => "+c);
+                            }
+    
+
+
+
+------> MAXMIMUM : Used to fing the max value of the particular  field
+
+                     
+    --- User case 1 :  Find the max cost of a ci 
+
+         Script :   
+                      var MAXCost = new GlideAggregate('cmdb_ci');
+                      MAXCost.addAggregate('MAX', 'cost');
+                      MAXCost.setGroup(false);
+                      MAXCost.query();
+                      while (MAXCost.next()) {
+                      
+                          var c = MAXCost.getAggregate('MAX', 'cost');
+                          gs.info("The MAXimum cost of a ci is => " + c);
+                      }
+
+
+   ----> SUM : Finding the total value of a field 
+
+
+        User case 1 : Find the total cost of ci's 
+
+            Script : 
+
+                        var SUMCost = new GlideAggregate('cmdb_ci');
+                         SUMCost.addAggregate('SUM', 'cost');
+                         SUMCost.setGroup(false);
+                         SUMCost.query();
+                         while (SUMCost.next()) {
+                         
+                             var c = SUMCost.getAggregate('SUM', 'cost');
+                             gs.info("The Total cost of  ci's is => " + c);
+                         }            
+
+
+   
+ ---> AVG : Finding the average  value of a field   == sum / total no of values
+
+       
+       User case 1 :   Find the average cost of a ci  
+
+          Script : 
+                       
+                   
+                   var AVGCost = new GlideAggregate('cmdb_ci');
+                  AVGCost.addAggregate('AVG', 'cost');
+                  AVGCost.setGroup(false);
+                  AVGCost.query();
+                  while (AVGCost.next()) {
+                  
+                      var c = AVGCost.getAggregate('AVG', 'cost');
+                      gs.info("The AVG cost of  ci's is => " + c);
+                  
+                  }
