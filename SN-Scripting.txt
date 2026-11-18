@@ -519,3 +519,59 @@
                       gs.info("The AVG cost of  ci's is => " + c);
                   
                   }
+
+
+
+----> Date : 18/11/26 
+
+  
+   Business rule : In service there are 4 types of business rules they are 
+
+      Before  , After , Async , Display -- write logic in the server side and performing the action 
+       on the client side 
+        
+    
+       DML operation ---- insert , update , query , delete 
+
+
+
+ 1 . Before - Before the data is submitted into the DB the logic is executed 
+
+       
+         User Scenario 1 :  When the category is selected to software set assignment group to software 
+          
+
+            Before BR -- insert , Update
+            
+             Script :  
+                         
+                           if(current.category=="software"){
+			current.assignment_group="477a05d153013010b846ddeeff7b1225";
+		 }
+       
+
+
+       User scenario 2 :  When the description is empty set up the description i want to set the caller 
+                        logged user   
+
+            Script : 
+               
+                 (function executeRule(current, previous /*null when async*/) {
+
+	                       // Add your code here
+
+                            if(current.description.nil()){
+                            
+                     	   current.description="Business rule is executed";
+                     	   current.caller_id=gs.getUser();
+                     	   gs.addInfoMessage("The record is submitted into the data base");
+                     
+                     	   }
+                     })(current, previous);
+            
+
+
+
+
+
+        
