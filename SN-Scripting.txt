@@ -568,7 +568,77 @@
                      
                      	   }
                      })(current, previous);
-            
+         
+
+------> After :  after the data is submitted into the database the logic is executed   
+   
+        
+         User scenario : When an incident is created with p1 priority  , Simultaneously i want to create 
+
+               problem record inside the problem table after 10 sec
+
+
+          Script: 
+
+               After --  insert and Update 
+
+
+                  var pr = new GlideRecord('problem');
+	                if(current.priority=="1"){
+                     gs.sleep(10000);
+	                	pr.initialize();
+	                	pr.description=current.description+current.number;
+	                	pr.insert();
+	                	gs.addInfoMessage("Th record has been created inside the problem --"+pr.number);
+	                	
+	                }
+
+   
+-------> Async :   same as after but funcationality is different 
+                     suppose if you set some time to while submmiting the record into DB
+                     it wont let the user to wait for that specified time it allow him to submit the things
+                      and that time will run in the background 
+
+         
+    User scenario 1 :   When an incident is created with p1 priority  , Simultaneously i want to create 
+
+               problem record inside the problem table after 10 sec
+
+
+         Script :
+                     Async -- Insert , Updating 
+
+         
+      
+
+
+      --------> Display Business rule :  
+          
+                  Before the form is displayed to user the  , the form make request to the server side and response
+                    (action ) is performed on the client side  
+
+
+                    by using a glide object we call is g_scratchpad  
+
+               
+         User scenario 1 : When  the category is   changed to any value i want to populate an alert  
+
+
+            Script :   Display BR 
+
+
+                 g_scratchpad.msg = "The Display rule is executed";
+
+
+               Client Script :  
+
+                 onChange -- field (Category ) 
+
+                  Script : 
+                     
+                      alert(g_scratchpad.msg);
+
+
 
 
 
