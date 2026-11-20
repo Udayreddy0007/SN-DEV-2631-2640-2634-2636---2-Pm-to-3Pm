@@ -641,6 +641,77 @@
 
 
 
+  
+  -------> Date  : 20/11/26
+
+    
+    User scenario 2 :  Display caller information on an incident form 
+
+      
+      Script :  
+        
+           Display BR  :  
+             
+                   var caller = current.caller_id.getRefRecord();
+	               if(caller.isValidRecord()){
+               
+	               	g_scratchpad.caller_department = caller.department.getDisplayValue();
+	               	g_scratchpad.caller_email = caller.email.toString();
+	               }
+
+
+            
+            Client  Script : onLoad (Please use onload for DIspaly )
+
+                Script :  
+                 
+                             alert("The selected caller department is "+g_scratchpad.caller_department);
+
+                             alert("The caller email address is"+g_scratchpad.caller_email);
+   
+
+                              
+
+-------> Script Include : It is server side  function   like a container which stores server side function lives 
+           
+           on  server 
+               
+          Glide Ajax :  by using this glide object we make request to the server and in return we get response(XML)
+
+                          and we dispaly that server side things on the client side (clientcalable)
+
+    Async Script include :  
+      
+        Syntax :  
+              
+                             populateAlert:function(){
+             
+	             	  return "Hello from the server";
+             
+	              },
+
+           
+            
+
+
+
+      Client script :   onLoad
+       
+        
+         Script : 
+                      
+
+                      var ga = new GlideAjax('Testing'); // selecting the server script
+                    ga.addParam('sys_parm',' populateAlert');   // select the server script 
+                    
+                    ga.getXMLAnswer(function(answer){ // make request to the server and return the response
+                    
+                    alert(answer);
+                    });
+            
+
+
+
 
 
 
