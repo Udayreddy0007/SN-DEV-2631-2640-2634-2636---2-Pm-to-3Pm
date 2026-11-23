@@ -711,6 +711,25 @@
             
 
 
+----> Date : 23/11/26
+
+  -----> User case 2 :  When the caller is  selected on the incident form i want to populate the user 
+                        email , Department , Company 
+
+
+
+         Script :   
+
+
+
+
+
+         ---> After execution i will upload the script 
+            
+                
+
+
+             
 
 
 
